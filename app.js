@@ -2,6 +2,7 @@ const addForm = document.querySelector('.add');
 const search = document.querySelector('.search input');
 const list = document.querySelector('.todos');
 
+// template for each task
 const generateTemplate = todo => {
   const html = `
     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -12,6 +13,11 @@ const generateTemplate = todo => {
   list.innerHTML += html;
 };
 
+/**
+ * Here we map the array of tasks adding or removing the html class:
+ * "filtered", to show it or not depending on the case
+ * @param { String } term 
+ */
 const filterTodos = term => {
 
   // add filtered class
